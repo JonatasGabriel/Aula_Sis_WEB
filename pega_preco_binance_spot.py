@@ -1,10 +1,14 @@
+# =================================================================
+# =====      Binance SPOT - Jonatas Gabriel - 01 jan 2024     =====
+# =====     Versão 1.0 - https://github.com/JonatasGabriel    =====
+# =================================================================
 import requests
 
 # Url da API publica da Binance para obter o preco atual de um par SPOT
 url = "https://api.binance.com/api/v3/ticker/price" # SPOT Binance
 
 # Funcao que obtem da API publica da Binance o preco atual de um par SPOT
-def pega_preco(par):
+def pega_preco_binance_spot(par):
 
     # Recebe os dados de precos da API
     response = requests.get(url, timeout=10)
@@ -22,5 +26,5 @@ def pega_preco(par):
 if __name__ == "__main__":
 
     par = "BTCUSDT"
-    print (f'O preco atual de {par} em SPOT da Binance e {pega_preco(par)}')
+    print (f'O preco atual de {par} em SPOT da Binance e {pega_preco_binance_spot(par)}')
 
